@@ -1,5 +1,4 @@
-# Use lightweight nginx image
-FROM nginx:1.25-alpine
+FROM nginx:1.28.3-alpine-slim
 
 # Copy your bootstrap website files
 COPY . /usr/share/nginx/html/
@@ -8,4 +7,4 @@ COPY . /usr/share/nginx/html/
 EXPOSE 80
 
 # Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"] 
