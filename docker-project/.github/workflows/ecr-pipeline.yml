@@ -3,7 +3,7 @@ name: Build and Push to ECR
 on:
   push:
     branches:
-      - main   # trigger when prod is merged into main
+      - main   # trigger when push on main
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: us-east-1
 
-      - name: Login to ECR
+      - name: Login to ECR # Login into ECR
         run: |
           aws ecr get-login-password --region us-east-1 \
           | docker login --username AWS --password-stdin 816069122835.dkr.ecr.us-east-1.amazonaws.com
