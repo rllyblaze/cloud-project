@@ -6,6 +6,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy your bootstrap website files
 COPY . /usr/share/nginx/html/
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # DEBUG: show files
 RUN ls -la /usr/share/nginx/html
 
