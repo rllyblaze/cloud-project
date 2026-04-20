@@ -4,7 +4,10 @@ FROM nginx:1.28.3-alpine-slim
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy your bootstrap website files
-COPY docker-project/ /usr/share/nginx/html/
+COPY . /usr/share/nginx/html/
+
+# DEBUG: show files
+RUN ls -la /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
