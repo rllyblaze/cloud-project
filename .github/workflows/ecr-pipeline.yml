@@ -26,7 +26,7 @@ jobs:
           | docker login --username AWS --password-stdin 816069122835.dkr.ecr.us-east-1.amazonaws.com
 
       - name: Build Docker image
-        run: docker build --no-cache -t cloud-project-my-website:$latest .
+        run: docker build --no-cache -t cloud-project-my-website:latest .
 
       - name: Tag image
         run: docker tag cloud-project-my-website:latest 816069122835.dkr.ecr.us-east-1.amazonaws.com/cloud-project-my-website:latest
