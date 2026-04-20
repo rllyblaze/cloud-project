@@ -7,4 +7,4 @@ COPY . /usr/share/nginx/html/
 EXPOSE 80
 
 # Start nginx
-CMD ["nginx", "-g", "daemon off;"] 
+CMD ["nginx", "-g", "daemon off;"]
